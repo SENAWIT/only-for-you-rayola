@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Batman?</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/736x/a7/2a/68/a72a6829393eecd1f72b0f597c9a2b7c.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+        .question {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        .choice-button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <p class="question">Will you be my Batman?</p>
+    <div class="button-container">
+        <button class="choice-button" onclick="sayYes()">Yes</button>
+        <button class="choice-button" onclick="sayNo()">No</button>
+    </div>
+
+    <script>
+        function sayYes() {
+            window.location.assign("page3.html"); // ✅ Ensures correct navigation
+        }
+        function sayNo() {
+            alert("Oh no! Guess I'll be the Joker then 😜💔");
+        }
+    </script>
+</body>
+</html>
